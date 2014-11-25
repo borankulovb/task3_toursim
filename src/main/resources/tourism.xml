@@ -1,0 +1,18 @@
+<bak:Company xmlns:bak="http://www.bakyt.kz">
+  <!--1 or more repetitions:-->
+  <cruise ID="100">
+    <price>100</price>
+    <country>string</country>
+    <numberOfDays>201</numberOfDays>
+    <shipModel>string</shipModel>
+    <!--1 or more repetitions:-->
+    <cabin>INSIDE</cabin>
+  </cruise>
+  <!--1 or more repetitions:-->
+  <treatment ID="100">
+    <price>100</price>
+    <country>string</country>
+    <numberOfDays>201</numberOfDays>
+    <clinicName>string</clinicName>
+  </treatment>
+</bak:Company>

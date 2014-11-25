@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.bakyt.kz"
+        xmlns:bb="http://www.bakyt.kz"
+        >
+
+
+    <element name="Company">
+        <complexType>
+            <sequence>
+                <element name="cruise" type="bb:Cruise" maxOccurs="unbounded"></element>
+                <element name="treatment" type="bb:Treatment" maxOccurs="unbounded"></element>
+            </sequence>
+        </complexType>
+    </element>
+
+
+    <complexType name="Treatment">
+        <complexContent>
+            <extension base="bb:tour">
+                <all>
+                    <element name="clinicName" type="string"></element>
+                </all>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="Cruise">
+        <complexContent>
+            <extension base="bb:tour">
+                <sequence>
+                    <element name="shipModel" type="string"></element>
+                    <element name="cabin" type="bb:CabinType" maxOccurs="unbounded"></element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <simpleType name="CabinType">
+        <restriction base="string">
+            <enumeration value="INSIDE"/>
+            <enumeration value="OCEANVIEW"/>
+            <enumeration value="BALCONY"/>
+        </restriction>
+    </simpleType>
+
+    <complexType name="tour">
+        <sequence>
+            <element name="price" type="integer"/>
+            <element name="country" type="string"/>
+            <element name="numberOfDays" type="positiveInteger"/>
+        </sequence>
+        <attribute name="ID" use="required">
+            <simpleType>
+                <restriction base="integer">
+                    <pattern value="[0-9]{1,}"/>
+                </restriction>
+            </simpleType>
+        </attribute>
+    </complexType>
+
+
+</schema>
