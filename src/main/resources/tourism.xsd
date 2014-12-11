@@ -50,7 +50,7 @@
             <element name="country" type="string"/>
             <element name="numberOfDays" type="positiveInteger"/>
         </sequence>
-        <attribute name="ID" use="required">
+        <attribute name="id" use="required">
             <simpleType>
                 <restriction base="integer">
                     <pattern value="[0-9]{1,}"/>

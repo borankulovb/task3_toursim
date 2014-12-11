@@ -1,18 +1,18 @@
 <bak:Company xmlns:bak="http://www.bakyt.kz">
   <!--1 or more repetitions:-->
-  <cruise ID="100">
+  <cruise id="100">
     <price>100</price>
     <country>string</country>
     <numberOfDays>201</numberOfDays>
-    <shipModel>string</shipModel>
+    <shipModel>FiveModel</shipModel>
     <!--1 or more repetitions:-->
     <cabin>INSIDE</cabin>
   </cruise>
   <!--1 or more repetitions:-->
-  <treatment ID="100">
+  <treatment id="100">
     <price>100</price>
     <country>string</country>
     <numberOfDays>201</numberOfDays>
-    <clinicName>string</clinicName>
+    <clinicName>Belasu</clinicName>
   </treatment>
 </bak:Company>
