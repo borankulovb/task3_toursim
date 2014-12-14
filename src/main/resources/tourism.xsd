@@ -8,8 +8,8 @@
     <element name="Company">
         <complexType>
             <sequence>
-                <element name="cruise" type="bb:Cruise" maxOccurs="unbounded"></element>
                 <element name="treatment" type="bb:Treatment" maxOccurs="unbounded"></element>
+                <element name="cruise" type="bb:Cruise" maxOccurs="unbounded"></element>
             </sequence>
         </complexType>
     </element>
